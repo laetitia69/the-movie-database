@@ -1,3 +1,11 @@
-<% @movies.each do |movie| %>
-    <p><%= movie.title %>, réalisé par <%= movie.director %>, sorti en <%= movie.release_year %></p>
-<% end %>
+<div class="mx-auto" style="width: 80%;">
+	<h1>Voici la liste de films que nous vous proposons</h1>
+
+	<ul class="list-group list-group-flush">
+		<% @movies.each do |movie| %>
+		    <li class="list-group-item">
+		    	<%= movie.title %>, réalisé par <%= movie.director.first_name %> <%= movie.director.last_name %>, sorti en <%= movie.release_year %>
+		    </li>
+		<% end %>
+	</ul>
+</div>	
