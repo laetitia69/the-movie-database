@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+	Movie.all.destroy
+	movie = Movie.create(title: "American nightmare 1", release_year: 2013, director: "James DeMonaco")
